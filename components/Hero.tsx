@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useSoundscape } from "@/lib/useSoundscape";
+import basePath from "@/lib/basePath";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 type SlotContent =
@@ -66,7 +67,7 @@ function HeroMedia({ content }: { content: SlotContent }) {
   if (content.type === "video")
     return (
       <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-        <source src="/hero.mov" type="video/mp4" />
+        <source src={`${basePath}/hero.mov`} type="video/mp4" />
       </video>
     );
   return <Image src={content.src} alt={content.alt} fill className="object-cover" sizes="100vw" />;
@@ -77,7 +78,7 @@ function ThumbMedia({ content }: { content: SlotContent }) {
     return (
       <video autoPlay muted loop playsInline
         className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-[filter] duration-500">
-        <source src="/hero.mov" type="video/mp4" />
+        <source src={`${basePath}/hero.mov`} type="video/mp4" />
       </video>
     );
   return (
