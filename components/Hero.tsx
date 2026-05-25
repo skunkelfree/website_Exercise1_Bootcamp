@@ -11,10 +11,10 @@ type SlotContent =
   | { type: "image"; src: string; alt: string; kb: string };
 
 const INITIAL_THUMBS: SlotContent[] = [
-  { type: "image", src: "/thumb-1.jpeg", alt: "Mountain Space 1", kb: "kb1" },
-  { type: "image", src: "/thumb-2.jpeg", alt: "Mountain Space 2", kb: "kb2" },
-  { type: "image", src: "/thumb-3.jpeg", alt: "Mountain Space 3", kb: "kb3" },
-  { type: "image", src: "/thumb-4.jpeg", alt: "Mountain Space 4", kb: "kb4" },
+  { type: "image", src: `${basePath}/thumb-1.jpeg`, alt: "Mountain Space 1", kb: "kb1" },
+  { type: "image", src: `${basePath}/thumb-2.jpeg`, alt: "Mountain Space 2", kb: "kb2" },
+  { type: "image", src: `${basePath}/thumb-3.jpeg`, alt: "Mountain Space 3", kb: "kb3" },
+  { type: "image", src: `${basePath}/thumb-4.jpeg`, alt: "Mountain Space 4", kb: "kb4" },
 ];
 
 type Phase = "default" | "fading" | "new";
